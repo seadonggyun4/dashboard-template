@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Admin Dashboard</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- =============================  [ header ] ============================= -->
+  <header class="header">
+    <div class="header-nav">
+
+      <div class="header-title">
+        <a href="#">
+          <span class="icon"><ion-icon name="planet-outline" ></ion-icon></span>
+          <span class="title">Center Post</span>
+        </a>
+      </div>
+
+      <div class="toggle sm-only">
+        <ion-icon name="menu-outline"></ion-icon>
+      </div>
+
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="people-circle-outline"></ion-icon></span>
+            <span class="title">호스트관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="file-tray-stacked-outline"></ion-icon></span>
+            <span class="title">VD관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+            <span class="title">사용자관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">운영관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+            <span class="title">정책관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+            <span class="title">이력관리</span>
+          </a>
+        </li>
+        <li class="clicked">
+          <a href="#">
+            <span class="icon"><ion-icon name="clipboard-outline"></ion-icon></span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- =============================  [ main ] ============================= -->
+  <main class="main">
+    <!-- ========== [ topbar ] ========== -->
+    <div class="topbar">
+      <!-- toggle-btn -->
+      <div class="toggle">
+        <ion-icon name="menu-outline"></ion-icon>
+      </div>
+     
+      <!-- user -->
+      <div class="user">
+        <img src="./img/user.jpg" alt="user image">
+      </div>
+    </div>
+
+    <!-- ========== [ cardBox ] ========== -->
+    <div class="cardbox">
+      <div class="card host">
+        <div class="card-title">
+          <h2>호스트 현황</h2> 
+        </div>
+        <ul class="status-list">
+          <li class="status">
+            <div class="imgBx" aria-hidden="true">
+              <img src="./img/host1.png" alt="host1">
+            </div>
+            <div class="textBx">
+              <span>정상</span>
+              <strong class="text-primary">10</strong>
+            </div>
+          </li>
+          <li class="status">
+            <div class="imgBx" aria-hidden="true">
+              <img src="./img/host2.png" alt="host1">
+            </div>
+            <div class="textBx">
+              <span>경고</span>
+              <strong class="text-warning">10</strong>
+            </div>
+          </li>
+          <li class="status">
+            <div class="imgBx" aria-hidden="true">
+              <img src="./img/host3.png" alt="host1">
+            </div>
+            <div class="textBx">
+              <span>장애</span>
+              <strong class="text-error">10</strong>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="card vd">
+        <div class="card-title">
+          <h2>VD 현황</h2> 
+        </div>
+        <ul class="status-list">
+          <li class="status">
+            <div class="imgBx" aria-hidden="true">
+              <img src="./img/vd1.png" alt="host1">
+            </div>
+            <div class="textBx">
+              <span>정상</span>
+              <strong class="text-primary">10</strong>
+            </div>
+          </li>
+          <li class="status">
+            <div class="imgBx" aria-hidden="true">
+              <img src="./img/vd2.png" alt="host1">
+            </div>
+            <div class="textBx">
+              <span>경고</span>
+              <strong class="text-warning">10</strong>
+            </div>
+          </li>
+          <li class="status">
+            <div class="imgBx" aria-hidden="true">
+              <img src="./img/vd3.png" alt="host1">
+            </div>
+            <div class="textBx">
+              <span>장애</span>
+              <strong class="text-error">10</strong>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="card blue">
+        <div class="card-title">
+          <h2>사용자 현황</h2>
+        </div>
+        <div class="card-content">
+          <div class="iconBx">
+            <ion-icon name="people-outline"></ion-icon>
+          </div>
+          <div>
+            <div class="numbers">49/145</div>
+            <div class="cardName">접속자/총사용자</div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="card blue">
+        <div class="card-title">
+          <h2>신청 현황</h2>
+        </div>
+        <div class="card-content">
+          <div class="iconBx">
+            <ion-icon name="partly-sunny-outline"></ion-icon>
+          </div>
+          <div>
+            <div class="numbers">0</div>
+            <div class="cardName">총 신청 현황</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== [ details ] ========== -->
+    <div class="details">
+
+      <!-- order details list -->
+      <div class="recentOrders">
+        <div class="cardHeader">
+          <h2>호스트</h2>
+          <a href="#" class="btn">View All</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>이름</td>
+              <td>그룹</td>
+              <td>VD</td>
+              <td>상태안내</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ELHOST01</td>
+              <td>미지정</td>
+              <td>154</td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST02</td>
+              <td>미지정</td>
+              <td>99</td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST03</td>
+              <td>미지정</td>
+              <td>100</td>
+              <td><span class="status warning">경고</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST04</td>
+              <td>미지정</td>
+              <td>43</td>
+              <td><span class="status error">장애</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST05</td>
+              <td>미지정</td>
+              <td>8</td>
+              <td><span class="status warning">경고</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST06</td>
+              <td>미지정</td>
+              <td>118</td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST07</td>
+              <td>미지정</td>
+              <td>156</td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST08</td>
+              <td>미지정</td>
+              <td>116</td>
+              <td><span class="status warning">경고</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST09</td>
+              <td>미지정</td>
+              <td>113</td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>ELHOST10</td>
+              <td>미지정</td>
+              <td>107</td>
+              <td><span class="status error">장애</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- New Customer -->
+      <!-- <div class="recentCustomers">
+        <div class="cardHeader">
+          <h2>전체VD</h2>
+          <a href="#" class="btn">View All</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>이름</td>
+              <td>할당방식</td>
+              <td>사용자</td>
+              <td>상태안내</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>VD_PRO_56</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_41</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_63</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status warning">경고</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_86</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status error">장애</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_53</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status warning">경고</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_12</td>
+              <td>개별할당</td>
+              <td>rama4251</td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_35</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_14</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status warning">경고</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_23</td>
+              <td>개별할당</td>
+              <td>swaek</td>
+              <td><span class="status primary">정상</span></td>
+            </tr>
+            <tr>
+              <td>VD_PRO_44</td>
+              <td>미할당</td>
+              <td></td>
+              <td><span class="status error">장애</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+    </div>
+
+    <!-- ========== [ Charts ] ========== -->
+    <div class="graphBox">
+      <h1 class="visually-hidden">DashBoard chart</h1>
+      <div class="box">
+        <h2>시간대별 VD 접속 현황</h2>
+        <canvas id="myChart"  class="sm-hidden" width="800" height="100"></canvas>
+        <canvas id="myChart"  class="sm-only"></canvas>
+      </div>
+    </div>
+
+    <!-- ========== [ used-status ] ========== -->
+    <div class="used-status">
+      <div class="usedBx host">
+        <h2>호스트 사용현황</h2>
+        <ul class="statusList">
+          <li class="item">
+            <div class="text-group">
+              <div class="text-group-title">
+                <h4>cpu사용현황</h4>
+                <em>(vCPU : 3752 / CPU Core : 640)</em>
+              </div>
+              <p class="host">586%</p>
+            </div>
+            <div class="status-bg">
+              <span class="host" style="width: 586%;"></span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="text-group">
+              <div class="text-group-title">
+                <h4>Memory 가상화 율</h4>
+                <em>(사용 : 6541GB / 전체 : 5117GB)</em>
+              </div>
+              <p class="host">128%</p>
+            </div>
+            <div class="status-bg">
+              <span class="host" style="width: 128%;"></span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="text-group">
+              <div class="text-group-title">
+                <h4>Storage 사용현황</h4>
+                <em>(사용 : 1452GB / 전체 : 2230GB)</em>
+              </div>
+              <p class="host">65%</p>
+            </div>
+            <div class="status-bg">
+              <span class="host" style="width: 65%;"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="usedBx vd">
+        <h2>VD 사용현황</h2>
+        <ul class="statusList">
+          <li class="item">
+            <div class="text-group">
+              <div class="text-group-title">
+                <h4>VD 가동률</h4>
+                <em>(on VD : 524 / 전체 VD : 1014)</em>
+              </div>
+              <p class="vd">52%</p>
+            </div>
+            <div class="status-bg">
+              <span class="vd" style="width: 52%;"></span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="text-group">
+              <div class="text-group-title">
+                <h4>VD 접속률</h4>
+                <em>(사용 : 53 / 전체 : 145)</em>
+              </div>
+              <p class="vd">37%</p>
+            </div>
+            <div class="status-bg">
+              <span class="vd" style="width: 37%;"></span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="text-group">
+              <div class="text-group-title">
+                <h4>VD 할당률</h4>
+                <em>(사용 : 145 / 전체 : 1014)</em>
+              </div>
+              <p class="vd">14%</p>
+            </div>
+            <div class="status-bg">
+              <span class="vd" style="width: 14%;"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- =============================  [ footer ] ============================= -->
+    <footer class="footer">
+      <h1 class="visually-hidden">footer</h1>
+      <p>© 2017. TILON INC. ALL RIGHTS RESERVED.</p>
+    </footer>
+  </main>
+
+
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <!-- main js -->
+  <script src="./js/main.js"></script>
+  <script src="./js/my_chart.js"></script>
+</body>
+</html>

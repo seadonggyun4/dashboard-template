@@ -1,0 +1,709 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Noto Sans KR";
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .sm-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .md-only {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .md-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .lg-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sm-hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .md-hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .lg-hidden {
+    display: none !important;
+  }
+}
+
+/* header */
+.header-nav {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: #208cd8;
+  border-left: 10px solid #208cd8;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.header-nav .header-title {
+  width: 100%;
+}
+.header-nav .header-title a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  transition: 0.3s;
+}
+.header-nav .header-title a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+}
+.header-nav .header-title a .icon ion-icon {
+  font-size: 1.75em;
+}
+.header-nav .header-title a .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 10px;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+.header-nav .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 2.5em;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+}
+.header-nav ul {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+}
+.header-nav ul li {
+  position: relative;
+  margin-bottom: 5px;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.header-nav ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  transition: 0.3s;
+}
+.header-nav ul li a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+}
+.header-nav ul li a .icon ion-icon {
+  font-size: 1.75em;
+}
+.header-nav ul li a .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 10px;
+  height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+.header-nav ul li.clicked {
+  background: #fff;
+}
+.header-nav ul li.clicked a {
+  color: #208cd8;
+}
+.header-nav ul li.clicked a::before, .header-nav ul li.clicked a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+}
+.header-nav ul li.clicked a::before {
+  top: -50px;
+  box-shadow: 35px 35px 0 10px #fff;
+}
+.header-nav ul li.clicked a::after {
+  bottom: -50px;
+  box-shadow: 35px -35px 0 10px #fff;
+}
+.header-nav ul li:last-child {
+  margin-bottom: 0px;
+}
+.header-nav.active {
+  width: 80px;
+}
+@media (max-width: 991px) {
+  .header-nav {
+    left: -300px;
+  }
+  .header-nav.active {
+    left: 0;
+    width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .header-nav {
+    width: 100%;
+    left: -100%;
+    z-index: 10000;
+  }
+  .header-nav.active {
+    width: 100vw;
+    left: 0;
+  }
+}
+
+footer.footer {
+  padding: 30px;
+  width: 100%;
+  background: #f5f5f5;
+  border-top: 1px solid #999;
+  color: #999;
+  text-align: center;
+}
+
+.main {
+  position: absolute;
+  left: 300px;
+  align-items: center;
+  width: calc(100% - 300px);
+  min-height: 100vh;
+  background: #fff;
+  transition: 0.5s;
+}
+.main.active {
+  left: 80px;
+  width: calc(100% - 80px);
+}
+@media (max-width: 991px) {
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .main.active {
+    display: none;
+  }
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 5%;
+  width: 100%;
+  height: 60px;
+}
+.topbar .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+.topbar .user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.topbar .user img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 480px) {
+  .topbar .user {
+    min-width: 40px;
+  }
+}
+
+.cardbox {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding: 20px;
+  width: 100%;
+}
+.cardbox .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cardbox .card .card-title {
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+.cardbox .card .card-title h2 {
+  font-size: 17px;
+}
+.cardbox .card .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  width: 100%;
+}
+.cardbox .card .card-content .iconBx {
+  font-size: 3.5em;
+  color: #999;
+}
+.cardbox .card .card-content .numbers {
+  position: relative;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: end;
+  white-space: nowrap;
+  color: #208cd8;
+}
+.cardbox .card .card-content .cardName {
+  color: #999;
+  font-size: 1.1em;
+  text-align: end;
+  white-space: nowrap;
+}
+.cardbox .card .status-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+.cardbox .card .status-list .status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  margin-right: 10px;
+  border-right: 1px solid #f5f5f5;
+  width: 100%;
+}
+.cardbox .card .status-list .status .imgBx {
+  width: 35px;
+  height: 35px;
+}
+.cardbox .card .status-list .status .imgBx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardbox .card .status-list .status .textBx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardbox .card .status-list .status .textBx .text-primary {
+  color: #208cd8;
+}
+.cardbox .card .status-list .status .textBx .text-warning {
+  color: #ff9800;
+}
+.cardbox .card .status-list .status .textBx .text-error {
+  color: #f44336;
+}
+.cardbox .card .status-list .status:last-child {
+  margin-right: 0px;
+  border-right: none;
+}
+.cardbox .card.host {
+  border-top: 3px solid #208cd8;
+}
+.cardbox .card.vd {
+  border-top: 3px solid #4caf50;
+}
+.cardbox .card.blue {
+  padding: 0px;
+}
+.cardbox .card.blue .card-title {
+  background: #208cd8;
+  color: #fff;
+  border-bottom: none;
+}
+@media (max-width: 991px) {
+  .cardbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .cardbox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.graphBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  grid-gap: 30px;
+  padding: 20px;
+  width: 100%;
+  min-height: 200px;
+}
+.graphBox .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  border-top: 3px solid #999;
+}
+.graphBox .box h2 {
+  margin-bottom: 15px;
+}
+@media (max-width: 991px) {
+  .graphBox {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+  }
+}
+
+.details {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+  padding: 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+.details .recentOrders,
+.details .recentCustomers {
+  position: relative;
+  display: grid;
+  padding: 20px;
+  min-height: 500px;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  border-top: 3px solid #999;
+}
+.details .recentOrders .cardHeader,
+.details .recentCustomers .cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.details .recentOrders .cardHeader h2,
+.details .recentCustomers .cardHeader h2 {
+  font-weight: 600;
+  color: #208cd8;
+}
+.details .recentOrders .cardHeader .btn,
+.details .recentCustomers .cardHeader .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: #208cd8;
+  color: #fff;
+  border-radius: 6px;
+}
+.details .recentOrders table,
+.details .recentCustomers table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.details .recentOrders table thead td,
+.details .recentCustomers table thead td {
+  font-weight: 600;
+}
+.details .recentOrders table tbody tr,
+.details .recentCustomers table tbody tr {
+  color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.details .recentOrders table tbody tr:hover,
+.details .recentCustomers table tbody tr:hover {
+  background: #208cd8;
+  color: #fff;
+}
+.details .recentOrders table tbody tr:last-child,
+.details .recentCustomers table tbody tr:last-child {
+  border-bottom: none;
+}
+.details .recentOrders table tr td,
+.details .recentCustomers table tr td {
+  padding: 10px;
+}
+.details .recentOrders table tr td .status,
+.details .recentCustomers table tr td .status {
+  padding: 2px 4px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.details .recentOrders table tr td .status.primary,
+.details .recentCustomers table tr td .status.primary {
+  background: #208cd8;
+}
+.details .recentOrders table tr td .status.warning,
+.details .recentCustomers table tr td .status.warning {
+  background: #ff9800;
+}
+.details .recentOrders table tr td .status.error,
+.details .recentCustomers table tr td .status.error {
+  background: #f44336;
+}
+.details .recentOrders table tr td:nth-child(2),
+.details .recentCustomers table tr td:nth-child(2) {
+  text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3),
+.details .recentCustomers table tr td:nth-child(3) {
+  text-align: center;
+}
+.details .recentOrders table tr td:last-child,
+.details .recentCustomers table tr td:last-child {
+  text-align: end;
+}
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .details .recentOrders {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+  }
+  .details .recentOrders table .status {
+    white-space: nowrap;
+  }
+  .details .recentOrders::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .details .recentOrders .cardHeader h2,
+.details .recentCustomers .cardHeader h2 {
+    font-size: 20px;
+  }
+}
+
+.used-status {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  padding: 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+.used-status .usedBx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 400px;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  border-top: 3px solid #999;
+}
+.used-status .usedBx h2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  border-bottom: 2px solid #f5f5f5;
+}
+.used-status .usedBx .statusList {
+  width: 100%;
+  padding: 10px 0;
+}
+.used-status .usedBx .statusList li {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.used-status .usedBx .statusList li .text-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  width: 100%;
+}
+.used-status .usedBx .statusList li .text-group-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.used-status .usedBx .statusList li .text-group-title h4 {
+  margin-right: 3px;
+  font-weight: 500;
+}
+.used-status .usedBx .statusList li .text-group-title em {
+  color: #999;
+  font-size: 12px;
+}
+.used-status .usedBx .statusList li .text-group p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.used-status .usedBx .statusList li .text-group p.host {
+  color: #208cd8;
+}
+.used-status .usedBx .statusList li .text-group p.vd {
+  color: #4caf50;
+}
+.used-status .usedBx .statusList li .status-bg {
+  position: relative;
+  width: 100%;
+  height: 13px;
+  background: #e5e5e5;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.used-status .usedBx .statusList li .status-bg span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  transition: width 1s;
+}
+.used-status .usedBx .statusList li .status-bg span.host {
+  background: #208cd8;
+}
+.used-status .usedBx .statusList li .status-bg span.vd {
+  background: #4caf50;
+}
+.used-status .usedBx .statusList li:last-child {
+  margin-bottom: 0;
+}
+.used-status .usedBx.host {
+  border-color: #208cd8;
+}
+.used-status .usedBx.vd {
+  border-color: #4caf50;
+}
+@media (max-width: 768px) {
+  .used-status {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

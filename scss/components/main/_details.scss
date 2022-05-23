@@ -1,0 +1,142 @@
+.details{
+  position: relative;
+  display: grid; //?
+  // grid-template-columns: 2fr 1fr; //?
+  grid-template-columns: repeat(1, 1fr); //?
+  grid-gap: 30px; //?
+  padding: 20px;
+  margin-top: 10px;
+  width: 100%;
+
+  .recentOrders,
+  .recentCustomers{
+    position: relative;
+    display: grid; //?
+    padding: 20px;
+    min-height: 500px;
+    background: $white;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    border-top: 3px solid $black2;
+
+    .cardHeader{
+      @include flexbox(between, start);
+      margin-bottom: 10px;
+
+      h2{
+        font-weight: 600;
+        color: $blue;
+      }
+
+      .btn{
+        position: relative;
+        padding: 5px 10px;
+        background: $blue;
+        color: $white;
+        border-radius: 6px;
+      }
+    }
+
+    table{
+      width: 100%;
+      border-collapse: collapse;
+
+      thead{
+        td{
+          font-weight: 600;
+        }
+      }
+
+      tbody{
+        tr{
+          color: $black1;
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+          cursor: pointer;
+  
+          &:hover{
+            background: $blue;
+            color: $white;
+          }
+  
+          &:last-child{
+            border-bottom: none;
+          }
+        }
+      }
+
+      tr{
+        td{
+          padding: 10px;
+
+
+          .status{
+            padding: 2px 4px;
+            color: $white;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+
+            &.primary{
+              background: $blue;
+            }
+
+            &.warning{
+              background: $yellow;
+            }
+
+            &.error{
+              background: $red;
+            }
+          }
+
+          &:nth-child(2){
+            text-align: end;
+          }
+
+          &:nth-child(3){
+            text-align: center;
+          }
+
+          &:last-child{
+            text-align: end;
+          }
+        }
+      }
+
+    }
+  }
+
+
+  // responsive
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr); //?
+
+    .recentOrders{
+      overflow-x: auto;
+      -ms-overflow-style: none;
+
+      table{
+        .status{
+          white-space: nowrap;
+        }
+      }
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .recentOrders,
+    .recentCustomers{
+      .cardHeader{
+        h2{
+          font-size: 20px;
+        }
+      }
+    }
+
+  }
+}
+
