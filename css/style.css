@@ -90,8 +90,8 @@ input {
   position: fixed;
   width: 300px;
   height: 100%;
-  background: #208cd8;
-  border-left: 10px solid #208cd8;
+  background: #287bff;
+  border-left: 10px solid #287bff;
   transition: 0.5s;
   overflow: hidden;
 }
@@ -194,7 +194,7 @@ input {
   background: #fff;
 }
 .header-nav ul li.clicked a {
-  color: #208cd8;
+  color: #287bff;
 }
 .header-nav ul li.clicked a::before, .header-nav ul li.clicked a::after {
   content: "";
@@ -366,7 +366,7 @@ footer.footer {
   font-size: 1.5em;
   text-align: end;
   white-space: nowrap;
-  color: #208cd8;
+  color: #287bff;
 }
 .cardbox .card .card-content .cardName {
   color: #999;
@@ -407,7 +407,7 @@ footer.footer {
   align-items: center;
 }
 .cardbox .card .status-list .status .textBx .text-primary {
-  color: #208cd8;
+  color: #287bff;
 }
 .cardbox .card .status-list .status .textBx .text-warning {
   color: #ff9800;
@@ -420,7 +420,7 @@ footer.footer {
   border-right: none;
 }
 .cardbox .card.host {
-  border-top: 3px solid #208cd8;
+  border-top: 3px solid #287bff;
 }
 .cardbox .card.vd {
   border-top: 3px solid #4caf50;
@@ -429,7 +429,7 @@ footer.footer {
   padding: 0px;
 }
 .cardbox .card.blue .card-title {
-  background: #208cd8;
+  background: #287bff;
   color: #fff;
   border-bottom: none;
 }
@@ -508,13 +508,13 @@ footer.footer {
 .details .recentOrders .cardHeader h2,
 .details .recentCustomers .cardHeader h2 {
   font-weight: 600;
-  color: #208cd8;
+  color: #287bff;
 }
 .details .recentOrders .cardHeader .btn,
 .details .recentCustomers .cardHeader .btn {
   position: relative;
   padding: 5px 10px;
-  background: #208cd8;
+  background: #287bff;
   color: #fff;
   border-radius: 6px;
 }
@@ -535,7 +535,7 @@ footer.footer {
 }
 .details .recentOrders table tbody tr:hover,
 .details .recentCustomers table tbody tr:hover {
-  background: #208cd8;
+  background: #287bff;
   color: #fff;
 }
 .details .recentOrders table tbody tr:last-child,
@@ -556,7 +556,7 @@ footer.footer {
 }
 .details .recentOrders table tr td .status.primary,
 .details .recentCustomers table tr td .status.primary {
-  background: #208cd8;
+  background: #287bff;
 }
 .details .recentOrders table tr td .status.warning,
 .details .recentCustomers table tr td .status.warning {
@@ -665,7 +665,7 @@ footer.footer {
   font-weight: 500;
 }
 .used-status .usedBx .statusList li .text-group p.host {
-  color: #208cd8;
+  color: #287bff;
 }
 .used-status .usedBx .statusList li .text-group p.vd {
   color: #4caf50;
@@ -701,7 +701,7 @@ footer.footer {
   transform: translate3d(0, 0, 0);
 }
 .used-status .usedBx.host {
-  border-color: #208cd8;
+  border-color: #287bff;
 }
 .used-status .usedBx.vd {
   border-color: #4caf50;
