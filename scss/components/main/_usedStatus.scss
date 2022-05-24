@@ -35,11 +35,13 @@
                 
                 .text-group{
                     @include flexbox(between,center);
+                    
                     padding: 5px 0;
                     width: 100%;
 
                     &-title{
                         @include flexbox(start, center);
+                        flex-wrap: wrap;
 
                         h4{
                             margin-right: 3px;

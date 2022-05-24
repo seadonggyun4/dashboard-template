@@ -650,6 +650,7 @@ footer.footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 .used-status .usedBx .statusList li .text-group-title h4 {
   margin-right: 3px;
