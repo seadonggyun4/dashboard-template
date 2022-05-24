@@ -689,10 +689,10 @@ footer.footer {
   transform: translate3d(-200%, 0, 0);
 }
 .used-status .usedBx .statusList li .status-bg span.host {
-  background: #208cd8;
+  background: linear-gradient(90deg, rgb(32, 140, 216) 45%, rgb(0, 212, 255) 78%);
 }
 .used-status .usedBx .statusList li .status-bg span.vd {
-  background: #4caf50;
+  background: linear-gradient(90deg, rgb(76, 175, 80) 35%, rgb(0, 255, 111) 77%);
 }
 .used-status .usedBx .statusList li:last-child {
   margin-bottom: 0;

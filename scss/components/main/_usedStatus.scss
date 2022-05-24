@@ -87,11 +87,13 @@
                         transform: translate3d(-200%, 0, 0);
 
                         &.host{
-                            background: $blue;
+                            // background: $blue;
+                            background: linear-gradient(90deg, rgba(32,140,216,1) 45%, rgba(0,212,255,1) 78%);;
                         }
 
                         &.vd{
-                            background: $green;
+                            // background: $green;
+                            background: linear-gradient(90deg, rgba(76,175,80,1) 35%, rgba(0,255,111,1) 77%);
                         }
                     }
                 }
