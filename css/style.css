@@ -683,7 +683,8 @@ footer.footer {
   left: 0;
   width: 0px;
   height: 100%;
-  transition: width 1s;
+  transition: all 2.5s ease-in-out;
+  transform: translate3d(-200%, 0, 0);
 }
 .used-status .usedBx .statusList li .status-bg span.host {
   background: #208cd8;
@@ -693,6 +694,9 @@ footer.footer {
 }
 .used-status .usedBx .statusList li:last-child {
   margin-bottom: 0;
+}
+.used-status .usedBx.active .statusList li .status-bg span {
+  transform: translate3d(0, 0, 0);
 }
 .used-status .usedBx.host {
   border-color: #208cd8;
