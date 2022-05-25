@@ -202,7 +202,12 @@
       <div class="recentOrders">
         <div class="cardHeader">
           <h2>호스트</h2>
-          <a href="#" class="btn">View All</a>
+          <div class="btn-wrap">
+            <a href=".primary" class="btn">정상</a>
+            <a href=".warning" class="btn">경고</a>
+            <a href=".error" class="btn">장애</a>
+            <a href="*" class="btn on">View All</a>
+          </div>
         </div>
         <table>
           <thead>
@@ -214,61 +219,61 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="primary">
               <td>ELHOST01</td>
               <td>미지정</td>
               <td>154</td>
               <td><span class="status primary">정상</span></td>
             </tr>
-            <tr>
+            <tr class="primary">
               <td>ELHOST02</td>
               <td>미지정</td>
               <td>99</td>
               <td><span class="status primary">정상</span></td>
             </tr>
-            <tr>
+            <tr class="warning">
               <td>ELHOST03</td>
               <td>미지정</td>
               <td>100</td>
               <td><span class="status warning">경고</span></td>
             </tr>
-            <tr>
+            <tr class="error">
               <td>ELHOST04</td>
               <td>미지정</td>
               <td>43</td>
               <td><span class="status error">장애</span></td>
             </tr>
-            <tr>
+            <tr class="warning">
               <td>ELHOST05</td>
               <td>미지정</td>
               <td>8</td>
               <td><span class="status warning">경고</span></td>
             </tr>
-            <tr>
+            <tr class="primary">
               <td>ELHOST06</td>
               <td>미지정</td>
               <td>118</td>
               <td><span class="status primary">정상</span></td>
             </tr>
-            <tr>
+            <tr class="primary">
               <td>ELHOST07</td>
               <td>미지정</td>
               <td>156</td>
               <td><span class="status primary">정상</span></td>
             </tr>
-            <tr>
+            <tr class="warning">
               <td>ELHOST08</td>
               <td>미지정</td>
               <td>116</td>
               <td><span class="status warning">경고</span></td>
             </tr>
-            <tr>
+            <tr class="primary">
               <td>ELHOST09</td>
               <td>미지정</td>
               <td>113</td>
               <td><span class="status primary">정상</span></td>
             </tr>
-            <tr>
+            <tr class="error">
               <td>ELHOST10</td>
               <td>미지정</td>
               <td>107</td>
@@ -472,6 +477,8 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!-- chart.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <!-- isotope js -->
+  <script src="./js/isotope.pkgd.min.js"></script>
   <!-- main js -->
   <script src="./js/main.js"></script>
   <script src="./js/my_chart.js"></script>

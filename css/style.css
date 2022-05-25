@@ -13,6 +13,7 @@ body {
 
 button {
   outline: none;
+  border: none;
 }
 
 a {
@@ -510,25 +511,43 @@ footer.footer {
   font-weight: 600;
   color: #287bff;
 }
-.details .recentOrders .cardHeader .btn,
-.details .recentCustomers .cardHeader .btn {
+.details .recentOrders .cardHeader .btn-wrap .btn,
+.details .recentCustomers .cardHeader .btn-wrap .btn {
   position: relative;
   padding: 5px 10px;
   background: #287bff;
   color: #fff;
   border-radius: 6px;
+  cursor: pointer;
 }
 .details .recentOrders table,
 .details .recentCustomers table {
   width: 100%;
   border-collapse: collapse;
 }
-.details .recentOrders table thead td,
-.details .recentCustomers table thead td {
+.details .recentOrders table thead,
+.details .recentCustomers table thead {
+  width: 100%;
+}
+.details .recentOrders table thead tr,
+.details .recentCustomers table thead tr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+.details .recentOrders table thead tr td,
+.details .recentCustomers table thead tr td {
   font-weight: 600;
+}
+.details .recentOrders table tbody,
+.details .recentCustomers table tbody {
+  width: 100%;
 }
 .details .recentOrders table tbody tr,
 .details .recentCustomers table tbody tr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
   color: #222;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;

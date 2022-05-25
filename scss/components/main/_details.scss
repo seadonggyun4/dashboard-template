@@ -28,13 +28,19 @@
         color: $blue;
       }
 
-      .btn{
-        position: relative;
-        padding: 5px 10px;
-        background: $blue;
-        color: $white;
-        border-radius: 6px;
+
+      .btn-wrap{
+
+        .btn{
+          position: relative;
+          padding: 5px 10px;
+          background: $blue;
+          color: $white;
+          border-radius: 6px;
+          cursor: pointer;
+        }
       }
+
     }
 
     table{
@@ -42,13 +48,25 @@
       border-collapse: collapse;
 
       thead{
-        td{
-          font-weight: 600;
+        width: 100%;
+
+        tr{
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          width: 100%;
+
+          td{
+            font-weight: 600;
+          }
         }
       }
 
       tbody{
+        width: 100%;
         tr{
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          width: 100%;
           color: $black1;
           border-bottom: 1px solid rgba(0,0,0,0.1);
           cursor: pointer;
