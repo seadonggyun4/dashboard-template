@@ -491,7 +491,6 @@ footer.footer {
 .details .recentOrders,
 .details .recentCustomers {
   position: relative;
-  display: grid;
   padding: 20px;
   min-height: 500px;
   background: #fff;
@@ -504,7 +503,7 @@ footer.footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .details .recentOrders .cardHeader h2,
 .details .recentCustomers .cardHeader h2 {
